@@ -1,0 +1,133 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*--------------------------------------FONDO DE PANTALLA*/
+body{
+     background-image: url(https://images.pexels.com/photos/325703/pexels-photo-325703.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+     /*
+     position: relative;
+     left: 100px;
+    */
+
+}
+/*--BOTON VOLVER*/
+.botonVolver{
+    position: relative;
+    left: 4%;
+    color: rgb(190, 190, 190);
+    /*este sirve para sacarle la linea fea*/
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: black 0px 15px 30px 5px;
+}
+.botonVolver :hover{
+    color: white;
+}
+
+/*--------------------------------------TITULO centrado*/
+nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 9vh;
+    font-family: 'Open Sans', sans-serif;
+    /*  COLOR O FOTO DEL FONDO DE LA BARRA SUPERIOR*/
+    background-image: url(https://images.pexels.com/photos/172292/pexels-photo-172292.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    background-position: bottom ;
+    
+}
+/*---------------------------------------TITULO*/
+.titulo{
+    color: rgb(216, 216, 216);
+    text-transform: uppercase;
+    letter-spacing: 9px;
+    font-size: 30px;
+    box-shadow: black 10px 8px 25px 5px;
+}
+.titulo :hover{
+    color: rgb(255, 255, 255);
+}
+
+
+
+/*----------------------------------------------------TABLAS---*/
+/*----POSISION DE LA TABLA---*/
+.tablas{
+    margin: 0 auto;
+    /*ANCHO*/
+    width: 96%;
+
+    /*POSITION*/
+    position: absolute;
+    left: 2%;
+    top: 12%;
+}
+/*-----ESTETICA DE LA TABLA*/
+.tablas th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+.tablas tr :hover{
+    background-color: rgb(200, 200, 200);
+}
+
+/*-------------------------------------TABLAS PRODUCTOS*/
+
+.tablas td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    background-color:white ;
+    text-transform: uppercase;
+    letter-spacing: 9px;
+    font-size: 20px;    
+    font-weight: bolder;
+}
+
+
+
+
+
+/*--------------------------------------INDICACION DE A PARTIR DE QUE TAMAÑO TIENE QUE CAMBIAR*/
+/*menu desplegable*/
+
+@media screen and (max-width:850px){
+    body{
+        /*desaparece el menu(sino queda todo junto)*/
+        overflow: hidden;
+        background-image: url(https://images.pexels.com/photos/325703/pexels-photo-325703.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        background-size: cover;
+        
+    }
+    
+    .opcionesExtras{
+        /*---INDICACIONES de como tiene que ser el menu para movil---*/
+        position: absolute;
+        font-size: 70px;
+        box-shadow: black 10px 50px 30px 5px;
+
+        right: 0px;
+        height: 92vh;
+        top: 7.48vh;
+        background-color:  rgb(58, 32, 58);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translate(100%);
+        transition: transform 0.5s ease-in ;
+        /* FOTO DE FONDO del menu*/
+        background-image: url(https://images.pexels.com/photos/172292/pexels-photo-172292.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+        background-size: auto;
+        background-position:400px 0px 0px;
+        border: 5px solid black;
+    }

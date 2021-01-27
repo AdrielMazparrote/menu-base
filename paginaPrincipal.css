@@ -1,0 +1,181 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*--------------------------------------FONDO DE PANTALLA*/
+body{
+     background-image: url(https://images.pexels.com/photos/1557686/pexels-photo-1557686.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+     /*
+     position: relative;
+     left: 100px;
+    */
+
+}
+
+/*--------------------------------------NAV GENERAL*/
+nav{
+
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 7vh;
+    font-family: 'Open Sans', sans-serif;
+    /*  COLOR O FOTO DEL FONDO DE LA BARRA SUPERIOR*/
+    background-image: url(https://images.pexels.com/photos/172292/pexels-photo-172292.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    background-position: bottom ;
+    box-shadow: 1px 15px 40px 5px;
+}
+/*---------------------------------------TITULO*/
+.titulo{
+    color: rgb(216, 216, 216);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 30px;
+    box-shadow: black 0px 10px 25px 5px;
+}
+.titulo :hover{
+    color: rgb(255, 255, 255);
+}
+/*  ---------------------------------OPCIONES EXTRAS (estetica y mas)-------------------*/
+.opcionesExtras{   
+    display:flex;
+    justify-content: space-around;
+    width: 45%; 
+
+}
+
+.opcionesExtras li{
+    /*para sacarle el puntito*/
+    list-style: none;
+    
+}
+.opcionesExtras a{
+    color: rgb(224, 222, 222);
+    /*este sirve para sacarle la linea fea*/
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: black 0px 15px 30px 5px;
+
+}
+
+.opcionesExtras :hover{
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    
+}
+
+
+/*-------------------------------------------------BOTONES-------------*/
+.botonMenu{
+    /*posiscion del boton*/
+    position: relative;
+    left: 10%;
+    bottom: -15vw;
+
+    /*estilo del boton*/
+    background-image: url(https://images.pexels.com/photos/172292/pexels-photo-172292.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    background-position-x: 1550px;
+    width: 250px;
+    height: 50px;
+    box-shadow: 2px 2px 40px 20px;
+}
+.botonMenu a{
+/* Estetica de la LETRA DENTRO DEL BOTON*/
+    color: rgb(194, 194, 194);
+    /*este sirve para sacarle la linea fea*/
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 40px;
+    position: relative;
+    left: 40px;
+}
+.botonMenu :hover{
+color: white;
+}
+/*------------------------------------------MENU DESPLEGABLE*/
+/*para que desaparezca en la pc*/
+.burger{
+    display: none;
+    cursor: pointer;
+}
+/*-Estos son las 3 lineas dibujadas BURGEEER 
+con parametros(menu desplegable)*/
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: antiquewhite;
+    margin: 5px;
+    /*velocidad de la transicion*/
+    transition: 1.5s;
+}
+
+
+/*--------------------------------------INDICACION DE A PARTIR DE QUE TAMAÑO TIENE QUE CAMBIAR*/
+/*menu desplegable*/
+
+@media screen and (max-width:850px){
+    body{
+        /*desaparece el menu(sino queda todo junto)*/
+        overflow: hidden;
+        background-image: url(https://images.pexels.com/photos/1557686/pexels-photo-1557686.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        background-size: auto ;
+       
+        
+    }
+    
+    .opcionesExtras{
+        /*---INDICACIONES de como tiene que ser el menu para movil---*/
+        position: absolute;
+        font-size: 70px;
+        box-shadow: black 10px 50px 30px 5px;
+
+        right: 0px;
+        height: 92vh;
+        top: 7.48vh;
+        background-color:  rgb(58, 32, 58);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translate(100%);
+        transition: transform 0.5s ease-in ;
+        /* FOTO DE FONDO del menu*/
+        background-image: url(https://images.pexels.com/photos/172292/pexels-photo-172292.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+        background-size: auto;
+        background-position:400px 0px 0px;
+        border: 5px solid black;
+    }
+    
+    .burger{
+        /*para que aparezca el icon del menu*/
+        display: block;
+    }
+    
+    .opcionesExtras :hover{
+        transform: scale(1.1);
+        color: rgb(255, 255, 255);
+    }
+}
+/*-----CLICK-----*/
+.nav-active{
+    transform: translateX(0%);
+}
+
+/*--CAMBIO DE BURGER A CRUZ*/
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,4px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-7px,-6px);
+    
+}
+
